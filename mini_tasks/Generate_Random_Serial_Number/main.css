@@ -3,3 +3,36 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+.serial {
+  margin: 30px auto;
+  text-align: center;
+  background: #2196f3;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  width: 400px;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+.generate {
+  font-weight: bold;
+  margin: 30px auto;
+  text-align: center;
+  background: #e91e63;
+  color: white;
+  font-size: 1.5rem;
+  padding: 15px;
+  user-select: none;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 10px;
+  box-shadow: 0px 9px 2px 0px #a71245;
+  transition: 0.3s;
+}
+
+.generate.active {
+  box-shadow: 0px 0 0 0px #a71245;
+  transform: translateY(9px);
+}
