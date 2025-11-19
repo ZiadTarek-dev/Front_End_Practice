@@ -2,4 +2,29 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.click {
+  font-size: 80px;
+  font-weight: 900;
+  user-select: none;
+}
+
+.counter {
+  font-weight: 900;
+  font-size: 85px;
+  user-select: none;
 }
