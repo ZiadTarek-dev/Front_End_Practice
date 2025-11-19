@@ -3,3 +3,49 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+.tabs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs li {
+  border: solid 1px #cbcbcb;
+  padding: 15px 20px;
+  background: #eee;
+  color: #686868;
+  cursor: pointer;
+  z-index: 1;
+  border-bottom: 0.5px solid #cbcbcb;
+  transition: 12.5ms;
+}
+.tabs li.active {
+  color: #03a9f4;
+  background-color: white;
+  border-bottom: none;
+  border-top: 3px #03a9f4 solid;
+}
+.tabs li:hover {
+  color: #03a9f4;
+  background-color: white;
+  border-top: 3px #03a9f4 solid;
+}
+.content div {
+  background: white;
+  padding: 0px;
+  font-size: 0;
+  border: none;
+  border-top-width: 0.5px;
+  color: #686868;
+  transform: translateY(-1px);
+  transition: 0.15s;
+  height: 0;
+}
+.content div.active {
+  border: solid 1px #cbcbcb;
+  font-size: 1rem;
+  padding: 25px;
+  height: auto;
+}
