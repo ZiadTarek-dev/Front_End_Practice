@@ -1,5 +1,148 @@
 :root {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+.container {
+  width: 600px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+}
+
+/* Small */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 85%;
+    padding: 15px;
+  }
+}
+
+/* Medium */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 70%;
+    padding: 20px;
+  }
+}
+
+/* Large */
+@media (min-width: 1025px) {
+  .container {
+    width: 600px; /* keeps the original width on large screens */
+  }
+}
+
+.form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.form .input {
+  padding: 7px;
+  flex: 1;
+  margin-right: 5px;
+  border: solid 2px #dfdfdf;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 75vw;
+}
+.form .add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48.2px;
+  width: 48.2px;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+  background: #992ea5;
+  border: none;
+  border-radius: 6px;
+  font-size: 40px;
+}
+.tasks {
+  transition: 0.4s;
+  height: auto;
+  overflow: hidden;
+}
+.tasks .task {
+  background: #e9e9e9;
+  padding: 15px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  position: relative;
+  transition: 0.4s;
+  max-width: 75vw;
+  font-weight: 600;
+}
+.tasks .task.done {
+  background: #00000061;
+  text-decoration: line-through;
+  color: #323232;
+}
+.tasks .task .op {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.tasks .task i {
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 48.4px;
+  color: white;
+  border-radius: 3px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 0;
+  margin-left: 2px;
+}
+.tasks .fa-check {
+  right: 48.4px;
+  top: 0;
+  background-color: green;
+}
+.tasks .fa-trash {
+  right: 0;
+  top: 0;
+  background: red;
+}
+.tasks .task:hover i {
+  width: 48.4px;
+  font-size: 1rem;
+}
+.tasks .task i::before {
+  transition: transform 0.4s;
+  transform: rotate(360deg);
+}
+.tasks .task:hover i::before {
+  transform: rotate(0deg);
+}
+.clear {
+  color: white;
+  font-size: 20px;
+  background: #992ea5;
+  border-radius: 3px;
+  padding: 8px;
+  font-weight: 900;
+  width: fit-content;
+  align-self: self-end;
+  user-select: none;
+  cursor: pointer;
 }
