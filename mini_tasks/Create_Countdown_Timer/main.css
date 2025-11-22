@@ -3,3 +3,44 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 16px);
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #333;
+  justify-content: space-between;
+  padding: 10px;
+}
+.container h2 {
+  text-align: center;
+  background: #2196f3;
+  margin: 0;
+  padding: 39px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  flex-basis: 100%;
+  margin-bottom: 10px;
+}
+.container div {
+  display: flex;
+  background: #2196f3;
+  flex-direction: column;
+  text-align: center;
+  height: 114px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-basis: calc(25% - 9px);
+}
+
+.container span {
+  font-size: 3rem;
+}
