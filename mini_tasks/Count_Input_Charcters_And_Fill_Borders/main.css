@@ -3,3 +3,33 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.input {
+  border: none transparent;
+  background: #eee;
+  font-size: 1.5rem;
+  padding: 20px;
+  border-bottom: solid 4px #b7b7b7;
+  outline: none;
+}
+.progress {
+  background: #2196f3;
+  height: 4px;
+  width: 0%;
+  transform: translateY(-100%);
+  transition: 200ms;
+}
+.counter {
+  display: flex;
+  justify-content: flex-end;
+  transition: 300ms;
+  user-select: none;
+}
+.counter.zero {
+  font-weight: bold;
+  color: red;
+}
