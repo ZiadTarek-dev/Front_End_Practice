@@ -3,3 +3,35 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+body {
+  margin: 0;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.one {
+  background-color: #aaa;
+}
+section.two {
+  background-color: #bbb;
+}
+section.three {
+  background-color: #ccc;
+}
+
+.nums {
+  display: flex;
+}
+.num {
+  margin: 0 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
