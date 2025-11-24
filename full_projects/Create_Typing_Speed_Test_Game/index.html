@@ -4,9 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
-    <title>Document</title>
+    <title>Typing Speed Test Game</title>
   </head>
   <body>
+    <div class="game-container">
+      <div class="header">
+        <h1>Typing Speed Test</h1>
+        <button id="start"><span>&#9658;</span> START</button>
+      </div>
+
+      <div class="game-body">
+        <div id="sentence">Press Start to begin...</div>
+
+        <input
+          id="input"
+          type="text"
+          placeholder="Type here..."
+          disabled
+          autocomplete="off"
+        />
+
+        <div class="progress-wrapper">
+          <div class="progress-bar" id="progress-bar"></div>
+          <span class="progress-text" id="progress-text">0%</span>
+        </div>
+
+        <div class="footer">
+          Your Typing Speed Is: <span class="result">44WPM</span>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="main.js"></script>
   </body>
 </html>
