@@ -1,5 +1,118 @@
 :root {
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+  --primary-color: #2a9d8f;
+  --primary-hover: #248a7d;
+  --card-back: #7f909f;
+  --bg-color: #f4f7f6;
+  --text-color: #2c3e50;
+  --white: #ffffff;
+
+  --border-radius: 8px;
+  --gap: 16px;
+  --card-size: 100px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(4 * var(--card-size) + 3 * var(--gap));
+  margin-bottom: 25px;
+}
+
+.info {
+  display: flex;
+  gap: 30px;
+  background: var(--white);
+  padding: 10px 25px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
+
+.info span {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.restart {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 600;
+}
+
+.restart:hover {
+  background-color: var(--primary-hover);
+}
+
+.game-body {
+  display: grid;
+  grid-template-columns: repeat(4, var(--card-size));
+  grid-template-rows: repeat(4, var(--card-size));
+  gap: var(--gap);
+  perspective: 1000px;
+}
+
+.game-body > div {
+  width: var(--card-size);
+  height: var(--card-size);
+
+  background-color: var(--card-back);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-body > div i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  color: var(--white);
+  font-size: 2.5rem;
+  backface-visibility: hidden;
+  transition: opacity 0.6s;
+  opacity: 0;
+}
+
+.game-body > div.flipped {
+  background-color: var(--primary-color);
+  transform: rotateY(180deg);
+}
+
+.game-body > div.flipped i {
+  opacity: 1;
+}
+
+.lock-layer {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.05);
+  pointer-events: all;
 }
