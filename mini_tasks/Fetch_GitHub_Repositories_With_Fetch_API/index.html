@@ -1,12 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Repository Viewer</title>
     <link rel="stylesheet" href="main.css" />
-    <title>Document</title>
   </head>
   <body>
-    <script type="module" src="main.js"></script>
+    <div class="container">
+      <header>
+        <h1>My GitHub Repository Viewer</h1>
+        <div class="search-box">
+          <input type="text" placeholder="Enter GitHub username..." />
+          <button>Fetch Repos</button>
+        </div>
+      </header>
+
+      <main id="repo-list"></main>
+    </div>
+    <script src="main.js"></script>
   </body>
 </html>

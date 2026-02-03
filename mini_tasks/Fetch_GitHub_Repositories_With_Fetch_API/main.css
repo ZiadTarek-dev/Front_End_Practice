@@ -1,5 +1,151 @@
-:root {
-  font-family: Arial, Helvetica, sans-serif;
+/* General Reset */
+* {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #e9f1f7;
+  display: flex;
+  justify-content: center;
+  padding: 40px 80px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Header & Search */
+h1 {
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Repo Cards */
+.repo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+.repo-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.avatar img {
+  width: 45px;
+  height: 45px;
+}
+
+h3 {
+  color: #0366d6;
+  font-size: 1.1rem;
+}
+h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.repo-stats {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.language-tag {
+  background: #f1f8ff;
+  color: #0366d6;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+/*misc*/
+
+#loader {
+  border: #0422ff solid 5px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  animation-name: loader;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  position: relative;
+  animation-timing-function: ease-in-out;
+}
+#loader span {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  display: block;
+  border: #0366d6 solid 5px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: child-loader;
+  animation-timing-function: ease-in-out;
+}
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(2turn);
+  }
+}
+@keyframes child-loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
